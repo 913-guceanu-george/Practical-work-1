@@ -10,7 +10,7 @@ Additionally, create a map that associates to an edge an integer value (for inst
 
 ## Required operations:
 
-get the number of vertices '\n'
+get the number of vertices 'n'
 parse (iterate) the set of vertices
 given two vertices, find out whether there is an edge from the first one to the second one, and retrieve the Edge_id if there is an edge (the latter is not required if an edge is represented simply as a pair of vertex identifiers);
 get the in degree and the out degree of a specified vertex;
