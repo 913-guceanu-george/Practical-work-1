@@ -1,30 +1,31 @@
+from src.Repo.repo import Repository
 from src.UI.userinterface import UI
-from src.Repo.repo import TxtRepo
 
 
-def main():
+def __main__():
 
-    repo = TxtRepo()
+    repo = Repository()
     ui = UI(repo)
-
-    ui.welcome()
     ui.menu()
+
     while True:
-        usr_input = ui.user()
-        if usr_input == '1':
+        usr = ui.user()
+        if usr == '1':
             ui.menu()
-        elif usr_input == '2':
-            ui.printNumberOfVertices()
-        elif usr_input == '3':
+        elif usr == '2':
+            ui.numberofVertices()
+        elif usr == '3':
             ui.printVertices()
-        elif usr_input == '4':
-            ui.iterateVertices()
-        elif usr_input == '5':
-            ui.iterateVerticesBackwards()
-        elif usr_input == '6':
+        elif usr == '4':
+            ui.iterForward()
+        elif usr == '5':
+            ui.iterBackwards()
+        elif usr == '6':
+            ui.resetIter()
+        elif usr == '':
+            continue
+        elif usr == '0':
             return
-        else:
-            ui.wrong_input()
 
 
-main()
+__main__()
